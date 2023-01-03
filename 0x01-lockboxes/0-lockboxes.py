@@ -8,7 +8,7 @@ def canUnlockAll(boxes):
     """
     Determines whether a series of locked boxes can be opened
     based on keys that can be attained.
-    Solution to the lockboxes problem
+    Solution to the lockboxe's problem
     """
     seen = [False for i in range(len(boxes))]
 
