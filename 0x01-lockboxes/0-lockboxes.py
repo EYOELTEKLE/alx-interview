@@ -1,7 +1,21 @@
+#!/usr/bin/python3
+"""
+Solution to lockboxes problem
+"""
+
+
 def canUnlockAll(boxes):
+    """
+    Determines whether a series of locked boxes can be opened
+    based on keys that can be attained.
+    Solution to the lockboxes problem
+    """
     seen = [False for i in range(len(boxes))]
 
     def getGraph(graph={}):
+        """
+        adjacencyList graph
+        """
         for i in range(len(boxes)):
             for j in range(len(boxes[i])):
                 if i not in graph:
@@ -12,6 +26,9 @@ def canUnlockAll(boxes):
     graph = getGraph()
 
     def dfs(src):
+        """
+        DFS function
+        """
         stack = [src]
 
         while len(stack) > 0:
